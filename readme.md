@@ -1,26 +1,50 @@
-## Apa ini?
+# TUGAS PEMBUATAN WEB FRAMEWORK
 
-Ini adalah repositori yang berisi source code tutorial Codeigniter
-dari petanikode.com. Repositori ini terbagi menjadi beberapa branch.
-Masing-masing branch berisi kode untuk tiap tutorial.
+Ini adalah tugas framework yang menggunakan codeigniter 3 dengan mysql, saya kebetulan mendapatkan tugas web di bidang panagan. web ini saya buat dengan nama Madura Resto yang di dalamnya terdapat halaman admin dan halaman user yang sudah terkoneksi ke database.
 
-Untuk source code tutorial `#1` dan `#2` source codenya ada di branch `tutorial-3`,
-karena kemarin lupa dimasukin ke git :smile:.
+## BAHAN
 
-1. [Master Branch](https://github.com/petanikode/tutorial-codeigniter/tree/master): berisi source code tutorial terakhir
-2. Branch [tutorial-3](https://github.com/petanikode/tutorial-codeigniter/tree/tutorial-3): berisi source code tutorial 3.
-3. Branch [tutorial-4](https://github.com/petanikode/tutorial-codeigniter/tree/tutorial-4): berisi source code tutorial 4.
-4. Branch [tutorial-5](https://github.com/petanikode/tutorial-codeigniter/tree/tutorial-5): berisi source code tutorial 5.
+- CodeIgniter 3.1.11+
+- XAMPP
+- Visual Studio
 
-Jika ada saran dan masukan, silahkan buka [issue](https://github.com/petanikode/tutorial-codeigniter/issues) baru di repositori ini.
+## CARA MENGGUNAKANNYA
 
-## Daftar Isi Tutorial:
+- Mendownload Tampilan ADMIN serta USER yang tersedia di internet
+- Memasang Tampilan tersebut ke dalam CodeIgniter
+- Membuat Controller untuk memanggil halaman yang diperlukan seperti model, view, agar halaman dapat peroprasi dengan baik
+- Membuat Model untuk memanggil database yang diperlukan serta membuat funtion agar memiliki aksi untuk tombol-tombol yang tersedia
+- membuat view dimana sebagai tampilan interface nantinya saat halam dibuka
+- membuat CRUD agar dapat menambahkan, merubah, serta menghapus data produk nantinya
+- membuat function login agar halaman lebih aman, dan dibutuhkan login sebelum mengakses halaman ADMIN
+- Tampilan User untuk menampilkan data-data menu dan galeri yang ada di Madura Resto
 
-- [Tutorial Codeigniter #1: Pengenalan Codeigniter untuk Pemula](https://www.petanikode.com/codeigniter-pemula/)
-- [Tutorial Codeigniter #2: Memahami Router dan Controller](https://www.petanikode.com/codeigniter-mvc/)
-- [Tutorial Codeigniter #3: Menggunakan Bootstrap pada Codeigniter](https://www.petanikode.com/codeigniter-bootstrap/)
-- [Tutorial Codeigniter #4: Membaut Template untuk Admin](https://www.petanikode.com/codeigniter-template/)
-- [Tutorial Codeigniter #5: Membuat CRUD Produk](https://www.petanikode.com/codeigniter-database/)
-- ...
+## DATABASE
 
-Tutorial berikutnya (insya'allah) akan ditambahkan.
+``` php
+defined('BASEPATH') OR exit('No direct script access allowed');
+$active_group = 'default';
+$query_builder = TRUE;
+
+$db['default'] = array(
+    'dsn'   => '',
+    'hostname' => 'localhost',
+    'username' => 'root',
+    'password' => '',
+    'database' => 'maduraresto',
+    'dbdriver' => 'mysqli',
+    'dbprefix' => '',
+    'pconnect' => FALSE,
+    'db_debug' => (ENVIRONMENT !== 'production'),
+    'cache_on' => FALSE,
+    'cachedir' => '',
+    'char_set' => 'utf8',
+    'dbcollat' => 'utf8_general_ci',
+    'swap_pre' => '',
+    'encrypt' => FALSE,
+    'compress' => FALSE,
+    'stricton' => FALSE,
+    'failover' => array(),
+    'save_queries' => TRUE
+);
+```
